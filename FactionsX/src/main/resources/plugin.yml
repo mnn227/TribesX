@@ -1,18 +1,18 @@
-name: FactionsX
+name: TribesX
 api-version: '1.13'
 version: @project.version@
 author: ProSavage
-description: 'A high-octane factions experience.'
-main: net.prosavage.factionsx.FactionsX
+description: 'A high-octane Tribes experience.'
+main: net.prosavage.Tribesx.TribesX
 website: 'https://savagelabs.net'
-prefix: 'FactionsX'
+prefix: 'TribesX'
 load: POSTWORLD
 softdepend: [ PlaceholderAPI, ShopGUIPlus, FeatherBoard, WorldGuard, Vault, dynmap, Essentials, EconomyPlus ]
 loadbefore: [ FTOPX, CollectorsX ]
 commands:
-  factions:
-    description: 'the base factions command'
+  Tribes:
+    description: 'the base Tribes command'
     aliases: [ f, fac, facs, faction ]
   fx:
     description: 'The base admin command'
-    aliases: [ fax, factionsx, factionx ]
+    aliases: [ fax, Tribesx, factionx ]
