@@ -1,2 +1,2 @@
-# FactionsX
-A High-Octane Factions implementation, rewritten from the ground up.
+# TribesX
+A High-Octane Tribes implementation, rewritten from the ground up.
