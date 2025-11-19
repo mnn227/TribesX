@@ -7,7 +7,7 @@ plugins {
     id("com.github.johnrengelman.shadow")
 }
 
-description = "FactionsX Core Module."
+description = "TribesX Core Module."
 
 dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1")
@@ -61,7 +61,7 @@ tasks {
         mergeServiceFiles()
         minimize()
 
-        val shadePath = "net.prosavage.factionsx.shade"
+        val shadePath = "net.prosavage.Tribesx.shade"
         relocate("kotlinx", "$shadePath.kotlinx")
         relocate("kotlin", "$shadePath.kotlin")
         relocate("javax.annotation", "$shadePath.annotations")
