@@ -1,7 +1,7 @@
 import org.gradle.kotlin.dsl.support.zipTo
 
 allprojects {
-    group = "net.prosavage.factionsx"
+    group = "net.prosavage.Tribesx"
     version = "1.2-STABLE"
 }
 
@@ -43,7 +43,7 @@ tasks {
     register("packageRelease") {
         dependsOn(copyToRoot)
         doLast {
-            val releasePath = "${buildDir}/release/FactionsX+Addons"
+            val releasePath = "${buildDir}/release/TribesX+Addons"
             mkdir(releasePath)
             // Copy the plugins.
             copy {
@@ -66,23 +66,23 @@ tasks {
             readme.writeText(
                 "Hi, thanks for reading!\n" +
                         "\n" +
-                        "The FactionsX-${project.version} is a normal minecraft plugin, can goes in the \"/plugins/\" folder.\n" +
-                        "All jar files in the \"Addons\" folder, go in the \"/plugins/FactionsX/addons/\" folder.\n" +
+                        "The TribesX-${project.version} is a normal minecraft plugin, can goes in the \"/plugins/\" folder.\n" +
+                        "All jar files in the \"Addons\" folder, go in the \"/plugins/TribesX/addons/\" folder.\n" +
                         "* F CropUpgrades Addon is 1.13+.\n" +
                         "\n" +
-                        "The FactionsUUIDAPIProxy attempts to imitate FactionsUUID being present on your server, and proxies the API calls to FactionsX,\n" +
-                        "this allows plugins using FactionsUUID's API to work with FactionsX. This is a very new addition and I dont expect it to work perfectly\n" +
+                        "The TribesUUIDAPIProxy attempts to imitate TribesUUID being present on your server, and proxies the API calls to TribesX,\n" +
+                        "this allows plugins using TribesUUID's API to work with TribesX. This is a very new addition and I dont expect it to work perfectly\n" +
                         "as it IS a hack. If you have issues with a plugin feel free to come to our discord for support.\n" +
-                        "* FactionsUUIDAPIProxy is a minecraft plugin and goes in \"/plugins/\".\n" +
+                        "* TribesUUIDAPIProxy is a minecraft plugin and goes in \"/plugins/\".\n" +
                         "\n" +
                         "\n" +
-                        "Basic documentation for permissions or commands specific to this build can be found in the \"/plugins/FactionsX/docs\" " +
+                        "Basic documentation for permissions or commands specific to this build can be found in the \"/plugins/TribesX/docs\" " +
                         "folder after the first time starting up\n" +
                         "\n" +
                         "Discord: https://discord.gg/savagelabs\n" +
                         "Wiki: https://wiki.savagelabs.net"
             )
-            zipTo(File("${buildDir}/release/FactionsX-Release-${project.version}.zip"), File(releasePath))
+            zipTo(File("${buildDir}/release/TribesX-Release-${project.version}.zip"), File(releasePath))
         }
     }
 
@@ -110,7 +110,7 @@ tasks {
             // Copy the addons.
             copy {
                 from("$buildDir/libs/")
-                into("$serverPluginDirectory/FactionsX/addons")
+                into("$serverPluginDirectory/TribesX/addons")
                 include("*-Addon-$version.jar")
                 exclude("${project.name}-$version-all.jar")
             }
